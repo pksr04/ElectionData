@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HouseMembers" targetNamespace="http://tempuri.org/HouseMembers.xsd" xmlns:mstns="http://tempuri.org/HouseMembers.xsd" xmlns="http://tempuri.org/HouseMembers.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HouseMembers" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HouseMembers" msprop:Generator_UserDSName="HouseMembers">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HouseMembers" msprop:Generator_TableClassName="HouseMembersDataTable" msprop:Generator_TableVarName="tableHouseMembers" msprop:Generator_RowChangedName="HouseMembersRowChanged" msprop:Generator_TablePropName="_HouseMembers" msprop:Generator_RowDeletingName="HouseMembersRowDeleting" msprop:Generator_RowChangingName="HouseMembersRowChanging" msprop:Generator_RowEvHandlerName="HouseMembersRowChangeEventHandler" msprop:Generator_RowDeletedName="HouseMembersRowDeleted" msprop:Generator_RowClassName="HouseMembersRow" msprop:Generator_UserTableName="HouseMembers" msprop:Generator_RowEvArgName="HouseMembersRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PART_NO" msprop:Generator_ColumnVarNameInTable="columnPART_NO" msprop:Generator_ColumnPropNameInRow="PART_NO" msprop:Generator_ColumnPropNameInTable="PART_NOColumn" msprop:Generator_UserColumnName="PART_NO" type="xs:short" minOccurs="0" />
+              <xs:element name="Slno" msprop:Generator_ColumnVarNameInTable="columnSlno" msprop:Generator_ColumnPropNameInRow="Slno" msprop:Generator_ColumnPropNameInTable="SlnoColumn" msprop:Generator_UserColumnName="Slno" type="xs:int" minOccurs="0" />
+              <xs:element name="HOUSE_NO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="HOUSE_NO" msprop:Generator_ColumnVarNameInTable="columnHOUSE_NO" msprop:Generator_ColumnPropNameInTable="HOUSE_NOColumn" msprop:Generator_UserColumnName="HOUSE_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="FM_NAME" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="FM_NAME" msprop:Generator_ColumnVarNameInTable="columnFM_NAME" msprop:Generator_ColumnPropNameInTable="FM_NAMEColumn" msprop:Generator_UserColumnName="FM_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="RLN_TYPE" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="RLN_TYPE" msprop:Generator_ColumnVarNameInTable="columnRLN_TYPE" msprop:Generator_ColumnPropNameInTable="RLN_TYPEColumn" msprop:Generator_UserColumnName="RLN_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="RLN_FM_NM" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="RLN_FM_NM" msprop:Generator_ColumnVarNameInTable="columnRLN_FM_NM" msprop:Generator_ColumnPropNameInTable="RLN_FM_NMColumn" msprop:Generator_UserColumnName="RLN_FM_NM" type="xs:string" minOccurs="0" />
+              <xs:element name="IDCARD_NO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="IDCARD_NO" msprop:Generator_ColumnVarNameInTable="columnIDCARD_NO" msprop:Generator_ColumnPropNameInTable="IDCARD_NOColumn" msprop:Generator_UserColumnName="IDCARD_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="AREAID" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="AREAID" msprop:Generator_ColumnVarNameInTable="columnAREAID" msprop:Generator_ColumnPropNameInTable="AREAIDColumn" msprop:Generator_UserColumnName="AREAID" type="xs:string" minOccurs="0" />
+              <xs:element name="Sex" msprop:Generator_ColumnVarNameInTable="columnSex" msprop:Generator_ColumnPropNameInRow="Sex" msprop:Generator_ColumnPropNameInTable="SexColumn" msprop:Generator_UserColumnName="Sex" type="xs:string" minOccurs="0" />
+              <xs:element name="Age" msprop:Generator_ColumnVarNameInTable="columnAge" msprop:Generator_ColumnPropNameInRow="Age" msprop:Generator_ColumnPropNameInTable="AgeColumn" msprop:Generator_UserColumnName="Age" type="xs:int" minOccurs="0" />
+              <xs:element name="PollingName" msprop:Generator_ColumnVarNameInTable="columnPollingName" msprop:Generator_ColumnPropNameInRow="PollingName" msprop:Generator_ColumnPropNameInTable="PollingNameColumn" msprop:Generator_UserColumnName="PollingName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

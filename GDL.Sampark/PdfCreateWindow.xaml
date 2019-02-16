@@ -1,0 +1,62 @@
+﻿<Window
+    x:Class="DapperDemo.PdfCreateWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DapperDemo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="PdfCreateWindow"
+    Width="801.88"
+    Height="400.376"
+    mc:Ignorable="d">
+    <Grid Margin="0,0,15,11" Background="Beige">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400*" />
+            <ColumnDefinition Width="379*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel
+            Width="200"
+            Height="80"
+            Margin="23,60,176.759,218"
+            Orientation="Vertical">
+            <RadioButton
+                x:Name="btnBjp"
+                Margin="5,5,0,0"
+                Content="BJP"
+                FontSize="14"
+                FontWeight="DemiBold"
+                GroupName="ElctionParties" />
+            <RadioButton
+                x:Name="btnCongress"
+                Margin="5,5,0,0"
+                Content="CONGRESS"
+                FontSize="14"
+                FontWeight="DemiBold"
+                GroupName="ElctionParties" />
+        </StackPanel>
+
+        <Button
+            Width="100"
+            Height="30"
+            Margin="23,165,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="BtnCreatePdf_Click"
+            Content="Export PDF"
+            FontSize="16"
+            FontWeight="Bold"
+            RenderTransformOrigin="-0.016,-1.036" />
+
+        <Viewer:CrystalReportsViewer
+            x:Name="crvReport"
+            Grid.ColumnSpan="2"
+            Width="614"
+            Height="321"
+            Margin="165,27,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            ToggleSidePanel="None" />
+
+    </Grid>
+</Window>

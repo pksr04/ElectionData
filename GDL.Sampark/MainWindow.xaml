@@ -1,0 +1,108 @@
+﻿<Window x:Class="GDL.Sampark.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GDL.Sampark"
+        mc:Ignorable="d"
+         Title="MainWindow" Height="640" Width="1300">
+    
+    <Grid>
+        <DockPanel Name="dcPanel">
+            <StackPanel Name="TopRect" DockPanel.Dock="Top" Background="#D8C3A5" Height="50"></StackPanel>
+            <StackPanel Name="BottomRect" DockPanel.Dock="Bottom" Background="#8E8D8A" Height="50" />
+            <StackPanel Name="LeftRect" DockPanel.Dock="Left" Background="#E98470" Width="150">
+                <Button Background="#E98470" Content="List" Height="50" BorderThickness="0" FontSize="16" FontWeight="DemiBold" Foreground="White" Click="BtnFillGrid_Click"/>
+                <Button Background="#E98470" Content="Alphabetical List" Height="50" BorderThickness="0" FontSize="16" FontWeight="DemiBold" Foreground="White" Click="BtnAlphabeticalWiseFillGrid_Click" />
+                <Button Background="#E98470" Content="Age wise List" Height="50" BorderThickness="0" FontSize="16" FontWeight="DemiBold" Foreground="White" Click="BtnAgeWiseFillGrid_Click" />
+                <Button Background="#E98470" Content="Family Report" Height="50" BorderThickness="0" FontSize="16" FontWeight="DemiBold" Foreground="White" Click="BtnFamilyFillFrid_Click"/>
+                <Button Background="#E98470" Content="Family Head Report" Height="50" BorderThickness="0" FontSize="16" FontWeight="DemiBold" Foreground="White" Click="BtnHeadOfFamilyFillFrid_Click"/>
+                <Button Background="#E98470" Height="50" BorderThickness="0" FontSize="16" FontWeight="DemiBold" Foreground="White" Click="BtnMarriedWomenFillFrid_Click">
+                    <TextBlock TextAlignment="Center">Married Women<LineBreak />Report</TextBlock>
+                </Button>
+                <Button Background="#E98470" Content="Addess Wise List" Height="50" BorderThickness="0" FontSize="16" FontWeight="DemiBold" Foreground="White" Click="BtnAddressFillFrid_Click"/>
+                <Button Background="#E98470" Content="Double Name List" Height="50" BorderThickness="0" FontSize="16" FontWeight="DemiBold" Foreground="White" Click="BtnDoubleNamesFillFrid_Click"/>
+                <Button Background="#E98470" Content="SurName List" Height="50" BorderThickness="0" FontSize="16" FontWeight="DemiBold" Foreground="White" Click="BtnSurNameFillFrid_Click"/>
+                <Button Background="#E98470" Content="Generate PDF" Height="50" BorderThickness="0" FontSize="16" FontWeight="DemiBold" Foreground="White" Click="BtnGeneratePdf_Click"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top" Height="80" Background="#FFCB9A">
+                <Grid Height="53" Margin="10,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Content="PartFrom"  Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" />
+                    <TextBox Name="txbxPartFrom" Grid.Column="0" Grid.Row="1"  Width = "80" Height="30" />
+                    <Label Content="PartTo" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" />
+                    <TextBox Name="txbxPartTo" Grid.Column="1" Grid.Row="1"  Width = "80" Height="30" />
+                    <Label Content="SrNo" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" />
+                    <TextBox Name="txbxSrNo" Grid.Column="2" Grid.Row="1"  Width = "80" Height="30" />
+                    <Label Content="HNo" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" />
+                    <TextBox Name="txbxHNo" Grid.Column="3" Grid.Row="1"  Width = "80" Height="30" />
+                    <Label Content="Name" Grid.Column="4" Grid.Row="0" HorizontalAlignment="Center" />
+                    <TextBox Name="txbxName" Grid.Column="4" Grid.Row="1"  Width = "80" Height="30" />
+                    <Label Content="Relative" Grid.Column="5" Grid.Row="0" HorizontalAlignment="Center" />
+                    <TextBox Name="txbxRelative" Grid.Column="5" Grid.Row="1"  Width = "80" Height="30" />
+                    <Label Content="Epic ID" Grid.Column="6" Grid.Row="0" HorizontalAlignment="Center" />
+                    <TextBox Name="txbxEpicId" Grid.Column="6" Grid.Row="1"  Width = "80" Height="30" />
+                    <Button Name="BtnSearch" Content="Search" Height="30" Grid.Column="7" Grid.Row="1" Width="80" Background="#2574a9" FontWeight="DemiBold" BorderBrush="White" Foreground="White" Click="BtnSearch_Click"></Button>
+                    <Button Name="BtnReset" Content="Reset" Height="30" Grid.Column="8" Grid.Row="1" Width="80" Background="#c0392b" FontWeight="DemiBold" BorderBrush="White"  Foreground="White" Click="BtnReset_Click"></Button>
+                    <Button Name="BtnConvertPdf" Content="Survey PDF" Height="30" Grid.Column="9" Grid.Row="1" Width="80" Background="DarkRed" FontWeight="DemiBold" BorderBrush="White"  Foreground="White" Click="BtnConvertToPdf_Click"></Button>
+                </Grid>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="top"></StackPanel>
+
+            <StackPanel Name="Fill" Background="#EAE7DC">
+                <StackPanel>
+                    <DataGrid Name = "MemberDatagridview" AlternatingRowBackground = "LightBlue"
+         AlternationCount = "2" AutoGenerateColumns = "False" Height="300" Margin="0,6,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectionMode="Single" SelectionUnit="FullRow" SelectionChanged="MemberDatagridview_SelectionChanged" >
+                        <DataGrid.Columns>
+
+                            <DataGridTextColumn Header="Part No" Binding="{Binding Path='PART_NO'}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="Sr No" Binding="{Binding Path='Slno'}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="House No" Binding="{Binding Path='HOUSE_NO'}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="Name" Binding="{Binding Path='FullName'}" IsReadOnly="True" SortDirection="Ascending" />
+                            <DataGridTextColumn Header="Sex" Binding="{Binding Path='Sex'}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="Age" Binding="{Binding Path='Age'}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="Relative Type" Binding="{Binding Path='RLN_TYPE'}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="Relative" Binding="{Binding Path='RelativeFullName'}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="Card No" Binding="{Binding Path='IDCARD_NO'}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="Address" Binding="{Binding Path='AREAID'}" IsReadOnly="True" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+                <StackPanel>
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Left" Height="40" Width="280" Orientation="Horizontal">
+                            <Label Content="Male" FontWeight="DemiBold" Margin="0,10,0,0" />
+                            <TextBox Height="20" Width="80" Text="{Binding Path=NoMales,Mode=OneWay}" Margin="10" />
+                            <Label Content="Female" FontWeight="DemiBold" Margin="0,10,0,0" />
+                            <TextBox Height="20" Width="80" Text="{Binding Path=NoFemales,Mode=OneWay}" />
+                        </StackPanel>
+                        <StackPanel DockPanel.Dock="Right" Height="40" Width="310" Orientation="Horizontal">
+                            <Button Height="23" HorizontalAlignment="Left"  Name="BtnFirst" VerticalAlignment="Bottom" Width="40" Content="&lt;&lt;" Click="BtnFirst_Click" Opacity="0.75" />
+                            <Button Height="23"  VerticalAlignment="Bottom" Name="BtnPrevious" Width="40" Click="BtnPrev_Click" Opacity="0.75" Content="&lt;" />
+                            <Label x:Name="lblPageNumber" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="30" Width="80" VerticalContentAlignment="Center" VerticalAlignment="Bottom" />
+                            <Button Height="23" HorizontalAlignment="Right" x:Name="BtnNext" VerticalAlignment="Bottom" Width="40" Content="&gt;" Click="BtnNext_Click" Opacity="0.75" />
+                            <Button Height="23" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Width="40" Name="BtnLast" Click="BtnLast_Click" Opacity="0.75" Content="&gt;&gt;" />
+                            <ComboBox x:Name="CbNumberOfRecords" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Width="45" Margin="15,5,0,0"  SelectedIndex="0" SelectionChanged="CbNumberOfRecords_SelectionChanged" Opacity="0.75" />
+                        </StackPanel>
+                    </DockPanel>
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+
+    </Grid>
+</Window>

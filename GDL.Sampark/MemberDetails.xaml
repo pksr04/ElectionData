@@ -1,0 +1,69 @@
+﻿<Window
+    x:Class="GDL.Sampark.MemberDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:GDL.Sampark"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MemberDetails"
+    Width="700"
+    Height="250"
+    Closing="Window_Closing"
+    mc:Ignorable="d">
+    <Grid>
+        <DataGrid
+            Name="rowDataGrid"
+            Width="680"
+            Height="230"
+            Margin="10,10,10,10"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            AlternatingRowBackground="LightCyan"
+            AlternationCount="2"
+            AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Binding="{Binding Path='PART_NO'}"
+                    Header="Part No"
+                    IsReadOnly="True" />
+                <DataGridTextColumn
+                    Binding="{Binding Path='Slno'}"
+                    Header="Sr No"
+                    IsReadOnly="True" />
+                <DataGridTextColumn
+                    Binding="{Binding Path='HOUSE_NO'}"
+                    Header="House No"
+                    IsReadOnly="True" />
+                <DataGridTextColumn
+                    Binding="{Binding Path='FullName'}"
+                    Header="Name"
+                    IsReadOnly="True"
+                    SortDirection="Ascending" />
+                <DataGridTextColumn
+                    Binding="{Binding Path='Sex'}"
+                    Header="Sex"
+                    IsReadOnly="True" />
+                <DataGridTextColumn
+                    Binding="{Binding Path='Age'}"
+                    Header="Age"
+                    IsReadOnly="True" />
+                <DataGridTextColumn
+                    Binding="{Binding Path='RLN_TYPE'}"
+                    Header="Relative Type"
+                    IsReadOnly="True" />
+                <DataGridTextColumn
+                    Binding="{Binding Path='RelativFullName'}"
+                    Header="Relative"
+                    IsReadOnly="True" />
+                <DataGridTextColumn
+                    Binding="{Binding Path='IDCARD_NO'}"
+                    Header="Card No"
+                    IsReadOnly="True" />
+                <DataGridTextColumn
+                    Binding="{Binding Path='AREAID'}"
+                    Header="Address"
+                    IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
